@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>تسجيل الدخول - Instagram</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: all 0.2s ease;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            padding: 30px 40px;
+            width: 100%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        .logo {
+            margin-bottom: 30px;
+        }
+
+        .logo img {
+            width: 195px;
+        }
+
+        .input-group {
+            margin-bottom: 12px;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #dbdbdb;
+            border-radius: 6px;
+            background: #fafafa;
+            font-size: 14px;
+            direction: ltr;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #8e8e8e;
+            background: white;
+        }
+
+        button {
+            background: #0095f6;
+            color: white;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+            padding: 12px;
+            margin: 18px 0;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 14px;
+        }
+
+        button:hover {
+            background: #1877f2;
+        }
+
+        .separator {
+            color: #8e8e8e;
+            margin: 20px 0;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 13px;
+        }
+
+        .separator::before,
+        .separator::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #dbdbdb;
+        }
+
+        .social-login {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .fb-login {
+            color: #385185;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .forgot-password {
+            color: #00376b;
+            text-decoration: none;
+            font-size: 13px;
+            display: block;
+            margin: 15px 0;
+        }
+
+        .signup {
+            margin-top: 25px;
+            padding: 20px;
+            border: 1px solid #dbdbdb;
+            border-radius: 8px;
+            font-size: 14px;
+        }
+
+        .signup a {
+            color: #0095f6;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .apps {
+            margin-top: 30px;
+            text-align: center;
+        }
+
+        .apps p {
+            margin: 15px 0;
+            color: #262626;
+            font-size: 14px;
+        }
+
+        .app-stores {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .app-stores img {
+            height: 40px;
+        }
+
+        .error-message {
+            color: #ed4956;
+            font-size: 12px;
+            text-align: right;
+            margin-top: 4px;
+            display: none;
+        }
+
+        @media (max-width: 450px) {
+            .container {
+                padding: 20px;
+                border: none;
+                background: transparent;
+                box-shadow: none;
+            }
+            
+            .logo img {
+                width: 160px;
+            }
+
+            .app-stores img {
+                height: 45px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2a/Instagram_logo.svg/1200px-Instagram_logo.svg.png" alt="Instagram Logo">
+        </div>
+
+        <form id="loginForm">
+            <div class="input-group">
+                <input type="text" placeholder="اسم المستخدم أو البريد الإلكتروني" required>
+                <div class="error-message">يرجى إدخال اسم المستخدم أو البريد الإلكتروني</div>
+            </div>
+            
+            <div class="input-group">
+                <input type="password" placeholder="كلمة المرور" required>
+                <div class="error-message">يرجى إدخال كلمة المرور</div>
+            </div>
+
+            <button type="submit">تسجيل الدخول</button>
+        </form>
+
+        <div class="separator">أو</div>
+
+        <div class="social-login">
+            <a href="#" class="fb-login">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="#385185">
+                    <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/>
+                </svg>
+                تسجيل الدخول باستخدام فيسبوك
+            </a>
+        </div>
+
+        <a href="#" class="forgot-password">هل نسيت كلمة السر؟</a>
+
+        <div class="signup">
+            ليس لديك حساب؟ <a href="#">اشترك</a>
+        </div>
+
+        <div class="apps">
+            <p>نزّل التطبيق.</p>
+            <div class="app-stores">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH9nU1jmkSv6aPH6fbbVCJX4p1HYdBF4qYjQI4C-o175tdss0u5LrPOIbbn8RWE6fHVJQ&usqp=CAU" alt="Google Play">
+                <img src="https://static.cdninstagram.com/rsrc.php/v3/yu/r/EHY6QnZYdNX.png" alt="Microsoft Store">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // معالجة تسجيل الدخول
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const username = this.querySelector('input[type="text"]').value;
+            const password = this.querySelector('input[type="password"]').value;
+            const errorMessages = document.querySelectorAll('.error-message');
+
+            // إعادة تعيين رسائل الخطأ
+            errorMessages.forEach(msg => msg.style.display = 'none');
+
+            // التحقق من صحة البيانات
+            if (!username.trim()) {
+                this.querySelector('input[type="text"]').nextElementSibling.style.display = 'block';
+                return;
+            }
+
+            if (!password.trim()) {
+                this.querySelector('input[type="password"]').nextElementSibling.style.display = 'block';
+                return;
+            }
+
+            // محاكاة تسجيل الدخول الناجح
+            simulateLogin();
+        });
+
+        // محاكاة تسجيل الدخول
+        function simulateLogin() {
+            // إظهار رسالة تحميل
+            const submitButton = document.querySelector('#loginForm button[type="submit"]');
+            submitButton.innerHTML = 'جاري التسجيل...';
+            submitButton.disabled = true;
+
+            // محاكاة تأخير الشبكة
+            setTimeout(() => {
+                // محاولة فتح تطبيق إنستجرام
+                window.location.href = 'instagram://app';
+                
+                // إذا لم يفتح التطبيق خلال ثانيتين، يتم التوجيه للويب
+                setTimeout(() => {
+                    if (!document.hidden) {
+                        window.location.href = 'https://www.instagram.com/';
+                    }
+                }, 2000);
+            }, 1500);
+        }
+    </script>
+</body>
+</html>
